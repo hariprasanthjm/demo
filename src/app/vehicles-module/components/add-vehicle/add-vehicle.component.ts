@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AddVehicleComponent implements OnInit {
 
-  addVehicle = {};
+  addVehicle: any = {};
   @Output() closeAddVehicle: EventEmitter<any> = new EventEmitter();
 
   constructor() {}

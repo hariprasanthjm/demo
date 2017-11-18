@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./transporter-registration.component.scss']
 })
 export class TransporterRegistrationComponent implements OnInit {
-  createTransporter = {};
+  createTransporter: any = {};
   @Output() closeTransporterReg: EventEmitter<any> = new EventEmitter();
   @Output() submitTransporterReg: EventEmitter<any> = new EventEmitter();
 

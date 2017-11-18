@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class CustomerRegistrationComponent implements OnInit {
 
-  createCustomer = {};
+  createCustomer: any = {};
   @Output() closeCustomerReg: EventEmitter<any> = new EventEmitter();
   @Output() submitCustomerReg: EventEmitter<any> = new EventEmitter();
 
