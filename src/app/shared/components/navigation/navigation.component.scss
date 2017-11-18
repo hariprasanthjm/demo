@@ -1,0 +1,29 @@
+.navbar{
+    margin-top: 50px;
+    .navbar-nav{
+        list-style: none;
+        padding:0;
+        color:#8b8e99;
+        .nav-item{
+            padding: 10px;
+            .nav-link{
+                text-decoration: none;
+                color:#ffffff;
+                button{
+                    mat-icon{
+                        font-size:22px;
+                    }
+                }
+                .nav-text{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+/* .navbar-nav .active>.nav-link{
+    color:#fe9600 !important;
+} */
+.nav-item.active{
+    background: #0966a1;
+}
