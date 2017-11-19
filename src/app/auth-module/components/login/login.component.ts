@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { LoaderService } from '../../../shared/services/loader.service';
 
 import { AuthenticationService } from '../../../shared/services/authentication.service';
 
@@ -29,13 +30,14 @@ export class LoginComponent implements OnInit {
   constructor(private builder: FormBuilder,
               private route: ActivatedRoute,
               private router: Router,
-              private authenticationService: AuthenticationService
+              private authenticationService: AuthenticationService,
+              private loaderService: LoaderService
             ) { }
 
   ngOnInit() {
     this.authenticationService.logout();
-
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/vehicles';
+    this.loader();
   }
 
   login () {
@@ -51,6 +53,12 @@ export class LoginComponent implements OnInit {
           console.log('Error in Login', error);
         });
     // Attempt Logging in...
+  }
+  private loader() {
+    this.loaderService.display(true);
+    setTimeout(() => {
+      this.loaderService.display(false);
+    }, 2000);
   }
 
 }

@@ -12,6 +12,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { PremiereHeaderComponent } from './shared/components/premiere-header/premiere-header.component';
 import {CustomMaterialModule} from './shared/custom-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoaderService } from './shared/services/loader.service';
 
 // Mock Backend
 import { fakeBackendProvider } from './shared/helpers/fake-backend';
@@ -53,6 +54,7 @@ import 'rxjs/add/observable/of';
     FlexLayoutModule
   ],
   providers: [
+    LoaderService,
     SecureAuthGuard,
     AuthenticationService,
     UserService,
