@@ -26,4 +26,5 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Build in Github (Commands)
 
 ng build --prod --base-href https://hariprasanthjm.github.io/demo/
+
 ngh
