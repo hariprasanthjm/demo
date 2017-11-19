@@ -17,7 +17,7 @@ export class VehicleComponent implements OnInit {
     window.onresize = (e) => {
         ngZone.run(() => {
             this.width = window.innerWidth;
-            console.log(this.width, 'width');
+            // console.log(this.width, 'width');
         });
     };
    }

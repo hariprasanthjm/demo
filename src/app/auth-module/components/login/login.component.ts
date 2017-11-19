@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LoaderService } from '../../../shared/services/loader.service';
+import {MatSnackBar} from '@angular/material';
 
 import { AuthenticationService } from '../../../shared/services/authentication.service';
 
@@ -14,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   model: any = {};
   returnUrl: string;
+  signinLoader = false;
 
   mobile_number = new FormControl('', [
     Validators.required
@@ -31,7 +33,8 @@ export class LoginComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router,
               private authenticationService: AuthenticationService,
-              private loaderService: LoaderService
+              private loaderService: LoaderService,
+              private snackBar: MatSnackBar
             ) { }
 
   ngOnInit() {
@@ -44,15 +47,21 @@ export class LoginComponent implements OnInit {
     const mob_no = parseInt(this.loginForm.value.mobile_number, 10);
     const pwd = this.loginForm.value.password;
     console.log(mob_no, typeof mob_no);
-
+    this.signinLoader = true;
     this.authenticationService.login(mob_no, pwd).subscribe(
         data => {
+          setTimeout(() => {
             this.router.navigate([this.returnUrl]);
+            this.signinLoader = false;
+          }, 2000);
         },
         error => {
-          console.log('Error in Login', error);
+          console.log('Error in Login', error.message);
+          this.snackBar.open(error.message, 'Close', {
+            duration: 2500,
+          });
+          this.signinLoader = false;
         });
-    // Attempt Logging in...
   }
   private loader() {
     this.loaderService.display(true);

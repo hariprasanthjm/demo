@@ -20,6 +20,10 @@ $shallow-grey: #e1e1e6;
         position:absolute;
         top: 35px;
     }
+    mat-card-footer{
+        position: absolute;
+        bottom: 12%;
+    }
     .register-panel{
         .register-grid{
             .avatar-card{
@@ -118,6 +122,15 @@ $desktop-width: 1024px;
     }
     .signup-inline-container{
         width:100%;
+    }
+    mat-card-title{
+        margin-top: 30px !important;
+    }
+    .register-panel{
+        .avatar-card{
+            padding: 10px !important;
+            width: 240px !important;
+        }
     }
 }
 

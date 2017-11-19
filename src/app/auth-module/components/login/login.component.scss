@@ -5,6 +5,12 @@ $error-red : #f44336;
 .login-topContainer{
     width: 420px;
     padding: 70px 50px;
+    position: relative;
+    mat-progress-bar{
+        position: absolute;
+        top:0;
+        left: 0;
+    }
     .titleImage{
         background-repeat: no-repeat;
         background-position: 50%;

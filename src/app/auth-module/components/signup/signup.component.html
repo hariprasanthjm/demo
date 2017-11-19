@@ -17,6 +17,7 @@
                 </div>
             </div>
         </div>
+        <mat-card-footer>Already have an account ? <a routerLink="/auth/login">Login</a></mat-card-footer>
     </mat-card>
     <div *ngIf='displayCustomerRegistration' class="signup-inline-container">
       <app-customer-registration (closeCustomerReg)="closeEvent($event)" (submitCustomerReg)="submitReg($event,'customer')" ></app-customer-registration>

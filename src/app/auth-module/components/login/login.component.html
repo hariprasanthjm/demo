@@ -1,9 +1,10 @@
 <div class="login-wrapper" fxFill fxLayoutAlign="center center">
   <mat-card class="login-topContainer">
+      <mat-progress-bar *ngIf="signinLoader" class="example-margin" [color]="'warn'" [mode]="'indeterminate'"></mat-progress-bar>
     <!-- <div  class="titleImage" [ngStyle]="{'background-image': 'url(/assets/images/tracking-icon.svg)'}"></div> -->
     <mat-card-title>Sign In to Logy</mat-card-title>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
-      <div class="form-grp">
+      <div class="form-grp"> 
         <mat-form-field class="form-input">
           <mat-icon matPrefix class="mat-prefix">phone</mat-icon>
           <input matInput placeholder="Mobile Number*" type="text" name="mobile_number" id="mobile_number" [formControl]="mobile_number">

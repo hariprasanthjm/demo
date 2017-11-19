@@ -45,3 +45,41 @@
     color:#ffffff;
     background: #0e83cd;
 }
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+  @media only screen and (max-width: #{$tablet-width}) {
+    /* For mobile phones: */
+    .closeBtn{
+        border-radius: 50%;
+        background: #cccccc;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        i{
+            color: #ffffff;
+            margin: 3px;
+        }
+    }
+    .mat-card-title{
+        font-size: 22px;
+        padding-left: 20px !important;
+    }
+    form{
+        padding: 10px 20px !important;
+    }
+    .submit-btn{
+        width: 100% !important;
+        padding: 2px 0 !important;
+    }
+    mat-card{
+        padding: 26px 16px 0px 16px !important; 
+    }
+    .material-btn-grp {
+        padding: 0px !important;
+    }
+}
+
+@media only screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+}
