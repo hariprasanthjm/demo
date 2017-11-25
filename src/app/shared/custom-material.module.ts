@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { A11yModule } from '@angular/cdk/a11y';
-import { CompatibilityModule } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material';
 import { MatButtonToggleModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
@@ -31,9 +30,6 @@ import { MatStepperModule } from '@angular/material';
 import { MatDatepickerModule , MatNativeDateModule} from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PlatformModule } from '@angular/cdk/platform';
-// import { OverlayModule } from '@angular/material';
-// import { PlatformModule } from '@angular/material';
-// import { StyleModule } from '@angular/material';
 
 const MATERIAL_MODULES = [
   CommonModule,
@@ -53,7 +49,6 @@ const MATERIAL_MODULES = [
   MatTabsModule,
   MatToolbarModule,
   A11yModule,
-  CompatibilityModule,
   MatButtonToggleModule,
   MatDialogModule,
   MatIconModule,
@@ -67,7 +62,6 @@ const MATERIAL_MODULES = [
   MatNativeDateModule,
   OverlayModule,
   PlatformModule,
-  // StyleModule,
   MatStepperModule
 ];
 
