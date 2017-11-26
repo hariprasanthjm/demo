@@ -41,7 +41,7 @@ import { UserService } from '../shared/services/user.services';
     CustomerRegistrationComponent,
     TransporterRegistrationComponent
   ],
-  providers:[
+  providers: [
      AuthenticationService,
      UserService,
      // providers used to create fake backend

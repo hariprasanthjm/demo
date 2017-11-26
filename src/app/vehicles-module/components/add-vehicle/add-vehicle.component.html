@@ -1,20 +1,3 @@
-
-<!-- <mat-card fxFlex fxFlexAlign="start">
-    <mat-card-title>Add New Vehicle</mat-card-title>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayout fxLayout.xs="column" fxLayoutWrap fxLayoutGap="40px">
-        <mat-form-field class="example-full-width" fxFlex="calc(50% - 40px)">
-            <input matInput name="first" [(ngModel)]="addVehicle.registration_number" placeholder="First Name" required #first="ngModel">
-        </mat-form-field>
-        <mat-form-field class="example-full-width" fxFlex="calc(50% - 40px)">
-            <input matInput name="last" placeholder="Last Name" [(ngModel)]="addVehicle.driver_name" #last="ngModel">
-        </mat-form-field>
-        <mat-card-actions>
-            <button mat-raised-button color="primary" [disabled]='!f.valid'>Submit</button>
-        </mat-card-actions>
-        
-    </form>
-</mat-card> -->
-
 <mat-card class="add-vehicle-wrapper" fxFlex fxFlexAlign="start">
     <mat-card-title style="position:relative;">Add New Vehicle
       <span style="position:absolute;right:15px;cursor: pointer;" (click)="closeVehicleScreen()">

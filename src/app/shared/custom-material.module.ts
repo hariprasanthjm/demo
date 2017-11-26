@@ -30,6 +30,7 @@ import { MatStepperModule } from '@angular/material';
 import { MatDatepickerModule , MatNativeDateModule} from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PlatformModule } from '@angular/cdk/platform';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 const MATERIAL_MODULES = [
   CommonModule,
@@ -62,7 +63,8 @@ const MATERIAL_MODULES = [
   MatNativeDateModule,
   OverlayModule,
   PlatformModule,
-  MatStepperModule
+  MatStepperModule,
+  MatExpansionModule
 ];
 
 
