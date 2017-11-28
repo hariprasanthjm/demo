@@ -80,6 +80,7 @@ export const vehicleDatas: AddVehicle[] = [
     }
 ];
 
+
 export const vehicleTypes = [
     {id: 1, name: 'Tata 407', size: '9.10 X 6.2 X 6.2', tonnage: 2.5},
     {id: 2, name: 'LCV / Canter', size: '17 X 7X 6.2', tonnage: 5},

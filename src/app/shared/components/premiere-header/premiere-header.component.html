@@ -5,19 +5,23 @@
     <!-- <button mat-icon-button class="nav-buttons">
         <mat-icon>search</mat-icon>
     </button> -->
-    <button mat-icon-button class="nav-buttons">
-        <mat-icon>notifications</mat-icon>
+    <button mat-icon-button class="nav-buttons" [matMenuTriggerFor]="appMenu1">
+        <mat-icon style="font-size: 30px;">notifications</mat-icon>
     </button>
     <button mat-icon-button class="nav-buttons" [matMenuTriggerFor]="appMenu">
         <mat-icon style="font-size: 30px;">account_circle</mat-icon>
     </button>
     <span style="display:flex;flex-direction:column;font-size:13px;">
-        <span>Ravi Kumar</span>
+        <span>{{fullName}}</span>
         <span>Transporter</span>
     </span>
     <i class="material-icons">arrow_drop_down</i>
   </div>
   <mat-menu #appMenu="matMenu" style="padding:0px;">
     <button mat-menu-item style="height: 35px;line-height: 35px;" [routerLink]="['/auth/login']">Logout <mat-icon>power_settings_new</mat-icon></button>
+  </mat-menu>
+
+  <mat-menu #appMenu1="matMenu" style="padding:0px;">
+    <button mat-menu-item style="height: 35px;line-height: 35px;" >Help <mat-icon>power_settings_new</mat-icon></button>
   </mat-menu>
 </mat-card>

@@ -1,12 +1,14 @@
+import { Component } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { Globals } from '../../globals';
+
 
 @Injectable()
 export class AuthenticationService {
     constructor(private http: Http) { }
-
     login(mobile_number: number, password: string) {
         return this.http.post('/api/authenticate', JSON.stringify({ mobile_number: mobile_number, password: password }))
             .map((response: Response) => {
@@ -15,8 +17,10 @@ export class AuthenticationService {
                 if (user && user.token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(user));
+                    console.log(user.fullname);
+                    Globals.setName(user.fullname);
                 }
-
+                console.log("erere");
                 return user;
             });
     }

@@ -31,7 +31,27 @@
                                 </div>
                         </mat-tab>
                         <mat-tab label="MY DRIVERS">
-                            Coming Soon
+                            <div fxLayout="column" fxLayoutGap="25px" style="padding-top: 45px;">
+                                <mat-card class="vehicle-card-wrapper" *ngFor="let vehicle of myvehiclesList;let i = index">
+                                    <div class="vehicles-card-header">
+                                        <span>{{ i + 1 }}</span>
+                                        <span>{{ vehicle.vehicle_model }}</span>
+                                    </div>
+                                    <div fxLayout="row" class="vehicle-card-content">
+                                        <span fxFlex="10">
+                                            <i class="material-icons">local_shipping</i>
+                                        </span>
+                                        <span fxFlex="55">
+                                            <div fxLayout="column" style="padding-left: 15px;font-size: 14px;">
+                                                <div><span style="color:#cccccc;">Year : </span><span>{{ vehicle.vehicle_year }}</span></div>
+                                                <div><span style="color:#cccccc;">Tonnage : </span><span>{{ vehicle.tonnage }}</span></div>
+                                            </div>
+                                            
+                                        </span>
+                                        <span fxFlex="35" class="vehicle-card-no">{{ vehicle.registration_number }}</span>
+                                    </div>
+                                </mat-card>
+                            </div>
                         </mat-tab>
                     </mat-tab-group>
                 </div>
