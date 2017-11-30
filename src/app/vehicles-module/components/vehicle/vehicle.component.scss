@@ -22,6 +22,17 @@
         }
     }
 }
+.add-new-top{
+    margin-bottom: 15px;
+    position: relative;
+    text-align: right;
+}
+.driver-card-head{
+    display: flex;
+    mat-card-subtitle{
+        margin-right:10px;
+    }
+}
 .vehicle-card-wrapper{
     .vehicles-card-header{
         border-bottom: 1px solid #cccccc;
