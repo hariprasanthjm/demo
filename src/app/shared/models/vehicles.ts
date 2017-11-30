@@ -9,6 +9,13 @@ export class AddVehicle {
     insurance_expiry_date: any;
     vehicle_docs: boolean;
 }
+export class AddVehicle1 {
+   
+
+    driver_name: string;
+    licence_number: string;
+    mobile_number: string;
+}
 
 
 export const vehicleDatas: AddVehicle[] = [
@@ -77,6 +84,32 @@ export const vehicleDatas: AddVehicle[] = [
         fc_expiry_date: '20-10-2018',
         insurance_expiry_date: '6-5-2018',
         vehicle_docs: true
+    }
+];
+
+export const vehicleDatas1: AddVehicle1[] = [
+    {
+       
+        driver_name: 'ARUN',
+        licence_number: 'FCR0123456789',
+        mobile_number: '9876543210'
+    },
+    {
+        
+        driver_name: 'Prabu',
+        licence_number: 'MACO123456789',
+        mobile_number: '9876543210'
+    },
+    {
+        
+        driver_name: 'Mani',
+        licence_number: 'LANO123456789',
+        mobile_number: '9876543210'
+    },
+    {
+        driver_name: 'KARTHI',
+        licence_number: 'DRNO123456789',
+        mobile_number: '9876543210'
     }
 ];
 

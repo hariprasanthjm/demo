@@ -16,6 +16,7 @@ export class CustomerRegistrationComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
+    
   }
   createForm() {
     this.createCustomer = {

@@ -50,7 +50,7 @@ export class SignupComponent implements OnInit {
       .subscribe(
       data => {
         this.router.navigate(['/auth/login']);
-        alert('Successfully Created');
+        alert('Successfully 1 Created');
       },
       error => {
         console.log('Error Inside Signup Component', error);

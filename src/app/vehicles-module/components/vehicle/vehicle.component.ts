@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { vehicleDatas } from '../../../shared/models/vehicles';
+import { vehicleDatas1 } from '../../../shared/models/vehicles';
 
 @Component({
   selector: 'app-vehicle',
@@ -11,6 +12,7 @@ export class VehicleComponent implements OnInit {
 
   public showAddVehicle = false;
   public myvehiclesList = [];
+  public myvehiclesList1 = [];
   public width;
 
   constructor( ngZone: NgZone ) {
@@ -24,6 +26,7 @@ export class VehicleComponent implements OnInit {
 
   ngOnInit() {
     this.myvehiclesList = vehicleDatas;
+    this.myvehiclesList1 = vehicleDatas1;
   }
   detectCloseChanges(evt) {
     if (evt) {

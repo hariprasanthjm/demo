@@ -9,5 +9,5 @@ import { Globals } from '../../../globals';
 })
 export class PremiereHeaderComponent {
   fullName=Globals.getName();
-  console.log(fullName);
+  
   }

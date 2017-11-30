@@ -32,23 +32,23 @@
                         </mat-tab>
                         <mat-tab label="MY DRIVERS">
                             <div fxLayout="column" fxLayoutGap="25px" style="padding-top: 45px;">
-                                <mat-card class="vehicle-card-wrapper" *ngFor="let vehicle of myvehiclesList;let i = index">
+                                <mat-card class="vehicle-card-wrapper" *ngFor="let vehicle of myvehiclesList1;let i = index">
                                     <div class="vehicles-card-header">
                                         <span>{{ i + 1 }}</span>
-                                        <span>{{ vehicle.vehicle_model }}</span>
+                                        <span>{{ vehicle.driver_name }}</span>
                                     </div>
                                     <div fxLayout="row" class="vehicle-card-content">
                                         <span fxFlex="10">
-                                            <i class="material-icons">local_shipping</i>
+                                            <i class="material-icons">account_circle</i>
                                         </span>
                                         <span fxFlex="55">
-                                            <div fxLayout="column" style="padding-left: 15px;font-size: 14px;">
-                                                <div><span style="color:#cccccc;">Year : </span><span>{{ vehicle.vehicle_year }}</span></div>
-                                                <div><span style="color:#cccccc;">Tonnage : </span><span>{{ vehicle.tonnage }}</span></div>
+                                            <div fxLayout="column" style="padding-left: 15px;font-size: 14px; " >
+                                                <div><span style="color:#cccccc;">Driving License Num : </span><span>{{ vehicle.licence_number }}</span></div>
+                                                <div><span style="color:#cccccc;">Mobile.Num : </span><span>{{ vehicle.mobile_number }}</span></div>
                                             </div>
                                             
                                         </span>
-                                        <span fxFlex="35" class="vehicle-card-no">{{ vehicle.registration_number }}</span>
+                                      
                                     </div>
                                 </mat-card>
                             </div>
