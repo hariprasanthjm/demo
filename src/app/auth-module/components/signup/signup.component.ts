@@ -56,7 +56,7 @@ export class SignupComponent implements OnInit {
           verticalPosition: 'top'
         }); */
             const config = new MatSnackBarConfig();
-            const snackBarRef = this.snackBar.open('SRegistration Successfully Completed', 'Ok', { horizontalPosition: 'center'});
+            const snackBarRef = this.snackBar.open('Registration Successfully Completed', 'Ok', { horizontalPosition: 'center'});
             snackBarRef.afterDismissed().subscribe(null, null, () => {
               this.router.navigate(['/auth/login']);
             });
