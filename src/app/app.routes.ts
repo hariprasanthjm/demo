@@ -40,6 +40,10 @@ export const routes: Routes = [
       {
         path: 'booking',
         loadChildren: './booking-module/booking.module#BookingModule'
+      },
+      {
+        path: 'expense',
+        loadChildren: './expense-module/expense.module#ExpenseModule'
       }
     ]
   },
