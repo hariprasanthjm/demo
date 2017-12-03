@@ -5,7 +5,14 @@
 .expense-container{
     margin: 50px auto;
     width: 960px;
+    position: relative;
 }
+.add-new-top{
+    margin-bottom: 15px;
+    position: relative;
+    text-align: right;
+}
+
 .tab-wrap{
     // background: #ffffff;
     /deep/ mat-tab-group{
@@ -75,11 +82,11 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .vehicle-create-container{
+    .expense-create-container{
         margin: 0;
         width: 100%;
     }
-    .vehicle-container{
+    .expense-container{
         width: 85%;
         margin:30px auto;
     }
@@ -90,7 +97,7 @@
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .vehicle-create-container{
+    .expense-create-container{
         margin: 50px auto;
         width: 700px;
     }
